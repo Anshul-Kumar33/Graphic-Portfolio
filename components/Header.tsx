@@ -20,11 +20,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-3xl font-bold text-indigo-600 hover:text-indigo-700 transition-all duration-300 transform hover:scale-105" style={{fontFamily: 'Pacifico, cursive'}}>
+            <Link
+              href="/"
+              className="text-3xl font-bold text-indigo-600 hover:text-indigo-700 transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: "Palatino Linotype, cursive" }}
+            >
               Anshul Kumar
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-2">
               {navItems.map((item) => (
@@ -46,7 +50,13 @@ export default function Header() {
               className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 cursor-pointer transition-all duration-300"
             >
               <div className="w-6 h-6 flex items-center justify-center">
-                <i className={isMenuOpen ? 'ri-close-line text-xl' : 'ri-menu-line text-xl'}></i>
+                <i
+                  className={
+                    isMenuOpen
+                      ? "ri-close-line text-xl"
+                      : "ri-menu-line text-xl"
+                  }
+                ></i>
               </div>
             </button>
           </div>

@@ -52,30 +52,30 @@ export default function ContactSection() {
 
   const contactInfo = [
     {
-      icon: 'ri-mail-line',
-      label: 'Email',
-      value: 'anshul.kumar@gmail.com',
-      link: 'mailto:anshul.kumar@gmail.com'
+      icon: "ri-mail-line",
+      label: "Email",
+      value: "anshukumar921182@gmail.com",
+      link: "mailto:anshukumar921182@gmail.com",
     },
     {
-      icon: 'ri-phone-line',
-      label: 'Phone',
-      value: '+91 9876543210',
-      link: 'tel:+919876543210'
+      icon: "ri-phone-line",
+      label: "Phone",
+      value: "+91 9643715949",
+      link: "tel:+919643715949",
     },
     {
-      icon: 'ri-map-pin-line',
-      label: 'Location',
-      value: 'New Delhi, India',
-      link: null
-    }
+      icon: "ri-map-pin-line",
+      label: "Location",
+      value: "New Delhi, India",
+      link: null,
+    },
   ];
 
   const socialLinks = [
-    { icon: 'ri-instagram-line', name: 'Instagram', url: 'https://instagram.com/anshulkumar' },
-    { icon: 'ri-linkedin-line', name: 'LinkedIn', url: 'https://linkedin.com/in/anshulkumar' },
-    { icon: 'ri-behance-line', name: 'Behance', url: 'https://behance.net/anshulkumar' },
-    { icon: 'ri-dribbble-line', name: 'Dribbble', url: 'https://dribbble.com/anshulkumar' }
+    { icon: 'ri-instagram-line', name: 'Instagram', url: '#' },
+    { icon: 'ri-linkedin-line', name: 'LinkedIn', url: '#' },
+    { icon: 'ri-behance-line', name: 'Behance', url: '#' },
+    { icon: 'ri-dribbble-line', name: 'Dribbble', url: '#' }
   ];
 
   return (

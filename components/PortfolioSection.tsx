@@ -5,73 +5,89 @@ import { useState } from 'react';
 export default function PortfolioSection() {
   const [activeFilter, setActiveFilter] = useState('All');
 
-  const categories = ['All', 'Print Design', 'Digital Posters', '3D Work', 'Social Media'];
+  const categories = [
+    "All",
+    "Print Design",
+    "Banner",
+    "Infographic Design",
+    "Social Media",
+  ];
   
   const projects = [
     {
       id: 1,
-      title: 'Corporate Brand Identity',
-      description: 'Complete brand identity design including logo, business cards, and stationery',
-      category: 'Print Design',
-      tools: 'Illustrator, Photoshop',
-      image: 'https://readdy.ai/api/search-image?query=modern%20corporate%20brand%20identity%20design%20showcase%20with%20logo%20variations%2C%20business%20cards%2C%20letterhead%20and%20stationery%20mockups%2C%20clean%20professional%20layout%2C%20minimalist%20aesthetic%2C%20brand%20guidelines%20presentation&width=600&height=400&seq=portfolio-001&orientation=landscape'
+      title: "Corporate Brand Identity",
+      description:
+        "Complete brand identity design including logo, business cards, and stationery",
+      category: "Print Design",
+      tools: "Corel Draw, Illustrator",
+      image: "/image/Corporate Brand Identity.png",
     },
     {
       id: 2,
-      title: 'Social Media Campaign',
-      description: 'Instagram post series for lifestyle brand with consistent visual theme',
-      category: 'Social Media',
-      tools: 'Canva, Photoshop',
-      image: 'https://readdy.ai/api/search-image?query=creative%20social%20media%20post%20designs%20for%20lifestyle%20brand%2C%20Instagram%20feed%20layout%20with%20multiple%20posts%2C%20vibrant%20colors%2C%20modern%20typography%2C%20product%20photography%20integration%2C%20cohesive%20visual%20theme&width=600&height=400&seq=portfolio-002&orientation=landscape'
+      title: "Social Media Campaign",
+      description:
+        "Instagram post series for lifestyle brand with consistent visual theme",
+      category: "Social Media",
+      tools: "Gemini, Photoshop",
+      image: "/image/Social Media.png",
     },
     {
       id: 3,
-      title: '3D Product Visualization',
-      description: 'Photorealistic 3D rendering of consumer electronics with studio lighting',
-      category: '3D Work',
-      tools: 'Blender, 3ds Max',
-      image: 'https://readdy.ai/api/search-image?query=photorealistic%203D%20product%20rendering%20of%20modern%20electronics%20device%2C%20studio%20lighting%20setup%2C%20clean%20white%20background%2C%20professional%20product%20visualization%2C%20detailed%20textures%20and%20materials&width=600&height=400&seq=portfolio-003&orientation=landscape'
+      title: "Creative Web Banners",
+      description:
+        "High-impact website banner designs crafted to grab attention, improve visual flow, and communicate brand messages effectively.",
+      category: "Banner",
+      tools: "Gemini, Photoshop",
+      image: "/image/Banners for Websites.png",
     },
-    {
-      id: 4,
-      title: 'Event Poster Design',
-      description: 'Eye-catching poster design for music festival with dynamic typography',
-      category: 'Digital Posters',
-      tools: 'Illustrator, Photoshop',
-      image: 'https://readdy.ai/api/search-image?query=dynamic%20music%20festival%20event%20poster%20design%20with%20bold%20typography%2C%20vibrant%20gradient%20colors%2C%20abstract%20geometric%20elements%2C%20modern%20layout%20composition%2C%20concert%20promotional%20material&width=600&height=400&seq=portfolio-004&orientation=landscape'
-    },
-    {
-      id: 5,
-      title: 'Certificate Template Series',
-      description: 'Professional certificate templates for educational institutions',
-      category: 'Print Design',
-      tools: 'InDesign, Illustrator',
-      image: 'https://readdy.ai/api/search-image?query=elegant%20professional%20certificate%20template%20design%2C%20formal%20layout%20with%20decorative%20borders%2C%20academic%20institution%20branding%2C%20high%20quality%20print%20ready%20design%2C%20traditional%20yet%20modern%20aesthetic&width=600&height=400&seq=portfolio-005&orientation=landscape'
-    },
-    {
-      id: 6,
-      title: 'Digital Marketing Banner',
-      description: 'Web banners for e-commerce platform promotional campaigns',
-      category: 'Digital Posters',
-      tools: 'Photoshop, Illustrator',
-      image: 'https://readdy.ai/api/search-image?query=modern%20e-commerce%20promotional%20web%20banner%20design%2C%20sale%20announcement%20layout%2C%20product%20showcase%2C%20vibrant%20call-to-action%20buttons%2C%20digital%20marketing%20advertisement%20format&width=600&height=400&seq=portfolio-006&orientation=landscape'
-    },
+    // {
+    //   id: 4,
+    //   title: "Event Poster Design",
+    //   description:
+    //     "Eye-catching poster design for music festival with dynamic typography",
+    //   category: "Digital Posters",
+    //   tools: "Illustrator, Photoshop",
+    //   image:
+    //     "https://readdy.ai/api/search-image?query=dynamic%20music%20festival%20event%20poster%20design%20with%20bold%20typography%2C%20vibrant%20gradient%20colors%2C%20abstract%20geometric%20elements%2C%20modern%20layout%20composition%2C%20concert%20promotional%20material&width=600&height=400&seq=portfolio-004&orientation=landscape",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Certificate Template Series",
+    //   description:
+    //     "Professional certificate templates for educational institutions",
+    //   category: "Print Design",
+    //   tools: "Corel Draw, Illustrator",
+    //   image: "/image/New Pamphelate.jpg",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Digital Marketing Banner",
+    //   description: "Web banners for e-commerce platform promotional campaigns",
+    //   category: "Digital Posters",
+    //   tools: "Photoshop, Illustrator",
+    //   image:
+    //     "https://readdy.ai/api/search-image?query=modern%20e-commerce%20promotional%20web%20banner%20design%2C%20sale%20announcement%20layout%2C%20product%20showcase%2C%20vibrant%20call-to-action%20buttons%2C%20digital%20marketing%20advertisement%20format&width=600&height=400&seq=portfolio-006&orientation=landscape",
+    // },
     {
       id: 7,
-      title: 'Architectural Visualization',
-      description: '3D interior design rendering for residential space planning',
-      category: '3D Work',
-      tools: '3ds Max, Photoshop',
-      image: 'https://readdy.ai/api/search-image?query=photorealistic%203D%20interior%20design%20rendering%2C%20modern%20residential%20living%20room%2C%20natural%20lighting%2C%20contemporary%20furniture%2C%20architectural%20visualization%2C%20clean%20minimalist%20aesthetic&width=600&height=400&seq=portfolio-007&orientation=landscape'
+      title: "Infographic Poster Design",
+      description:
+        "Data-driven infographic poster designs crafted to communicate information clearly, effectively, and visually.",
+      category: "Infographic Design",
+      tools: "Corel Draw, Photoshop",
+      image: "/image/InfoGraphic.png",
     },
-    {
-      id: 8,
-      title: 'Brand Social Assets',
-      description: 'Complete social media asset pack including stories, posts, and highlights',
-      category: 'Social Media',
-      tools: 'Figma, Canva',
-      image: 'https://readdy.ai/api/search-image?query=comprehensive%20social%20media%20brand%20asset%20collection%2C%20Instagram%20stories%20templates%2C%20highlight%20covers%2C%20post%20layouts%2C%20consistent%20brand%20colors%20and%20typography%2C%20digital%20marketing%20materials&width=600&height=400&seq=portfolio-008&orientation=landscape'
-    }
+    // {
+    //   id: 8,
+    //   title: "Brand Social Assets",
+    //   description:
+    //     "Complete social media asset pack including stories, posts, and highlights",
+    //   category: "Social Media",
+    //   tools: "Figma, Canva",
+    //   image:
+    //     "https://readdy.ai/api/search-image?query=comprehensive%20social%20media%20brand%20asset%20collection%2C%20Instagram%20stories%20templates%2C%20highlight%20covers%2C%20post%20layouts%2C%20consistent%20brand%20colors%20and%20typography%2C%20digital%20marketing%20materials&width=600&height=400&seq=portfolio-008&orientation=landscape",
+    // },
   ];
 
   const filteredProjects = activeFilter === 'All' 

@@ -5,27 +5,26 @@ export default function SkillsSection() {
     {
       title: "Design Tools",
       skills: [
-        { name: "Photoshop", level: 95 },
-        { name: "Illustrator", level: 90 },
-        { name: "CorelDRAW", level: 85 },
-        { name: "InDesign", level: 80 },
+        { name: "Photoshop", level: 90 },
+        { name: "Illustrator", level: 80 },
+        { name: "CorelDRAW", level: 80 },
       ],
       icon: "ri-palette-line",
     },
     {
       title: "3D & Motion",
       skills: [
-        { name: "Blender", level: 75 },
-        { name: "3ds Max", level: 70 },
+        { name: "ChatGPT", level: 90 },
+        { name: "Gemini", level: 90 },
       ],
       icon: "ri-blender-fill",
     },
     {
       title: "Other Tools",
       skills: [
-        { name: "Canva", level: 90 },
-        { name: "Figma", level: 80 },
-        { name: "MS Office", level: 85 },
+        { name: "Canva", level: 80 },
+        { name: "Capcut", level: 80 },
+        { name: "MS Office", level: 80 },
       ],
       icon: "ri-tools-line",
     },
@@ -46,7 +45,7 @@ export default function SkillsSection() {
         <div className="text-center mb-12 animate-fadeInUp">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive skill set across design tools, 3D software, and emerging technologies
+            Comprehensive skill set across design tools and emerging technologies
           </p>
         </div>
 
@@ -86,9 +85,9 @@ export default function SkillsSection() {
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { icon: 'ri-award-line', label: '50+ Projects', desc: 'Completed' },
-            { icon: 'ri-user-smile-line', label: '30+ Clients', desc: 'Satisfied' },
-            { icon: 'ri-time-line', label: '3+ Years', desc: 'Experience' },
+            { icon: 'ri-award-line', label: '20+ Projects', desc: 'Completed' },
+            { icon: 'ri-user-smile-line', label: '5+ Clients', desc: 'Satisfied' },
+            { icon: 'ri-time-line', label: '2+ Years', desc: 'Experience' },
             { icon: 'ri-star-line', label: '4.9/5', desc: 'Rating' }
           ].map((stat, index) => (
             <div

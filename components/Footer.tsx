@@ -12,10 +12,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: 'ri-instagram-line', name: 'Instagram', url: 'https://instagram.com/anshulkumar' },
-    { icon: 'ri-linkedin-line', name: 'LinkedIn', url: 'https://linkedin.com/in/anshulkumar' },
-    { icon: 'ri-behance-line', name: 'Behance', url: 'https://behance.net/anshulkumar' },
-    { icon: 'ri-dribbble-line', name: 'Dribbble', url: 'https://dribbble.com/anshulkumar' }
+    { icon: 'ri-instagram-line', name: 'Instagram', url: '#' },
+    { icon: 'ri-linkedin-line', name: 'LinkedIn', url: '#' },
+    { icon: 'ri-behance-line', name: 'Behance', url: '#' },
+    { icon: 'ri-dribbble-line', name: 'Dribbble', url: '#' }
   ];
 
   return (
@@ -70,7 +70,7 @@ export default function Footer() {
                   <i className="ri-mail-line"></i>
                 </div>
                 <a href="mailto:anshul.kumar@gmail.com" className="hover:text-white transition-colors cursor-pointer">
-                  anshul.kumar@gmail.com
+                  anshukumar921182@gmail.com
                 </a>
               </div>
               <div className="flex items-center">
@@ -78,7 +78,7 @@ export default function Footer() {
                   <i className="ri-phone-line"></i>
                 </div>
                 <a href="tel:+919876543210" className="hover:text-white transition-colors cursor-pointer">
-                  +91 9876543210
+                  +91 9643715949
                 </a>
               </div>
               <div className="flex items-center">
