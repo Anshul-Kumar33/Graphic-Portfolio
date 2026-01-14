@@ -12,7 +12,7 @@ export default function SkillsSection() {
       icon: "ri-palette-line",
     },
     {
-      title: "3D & Motion",
+      title: "AI",
       skills: [
         { name: "ChatGPT", level: 90 },
         { name: "Gemini", level: 90 },
