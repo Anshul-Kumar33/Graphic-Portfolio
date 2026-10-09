@@ -1,0 +1,404 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =========================================================
+   PORTFOLIO THEME SYSTEM
+========================================================= */
+
+@font-face {
+    font-family: "MyCustomFont";
+    src: url("/font/MyCustomFont.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.custom-hero-font {
+    font-family: "MyCustomFont", serif;
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #111827;
+
+    --card: #ffffff;
+    --card-hover: #f9fafb;
+
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --surface: #f3f4f6;
+    --surface-hover: #e5e7eb;
+
+    --modal-overlay: rgba(0, 0, 0, 0.70);
+
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+
+    color-scheme: light;
+}
+
+
+/* =========================================================
+   DARK THEME
+========================================================= */
+
+html.dark {
+    --background: #0b1120;
+    --foreground: #f8fafc;
+
+    --card: #111827;
+    --card-hover: #1f2937;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    --border: #334155;
+
+    --surface: #1e293b;
+    --surface-hover: #334155;
+
+    --modal-overlay: rgba(0, 0, 0, 0.82);
+
+    --accent: #3b82f6;
+    --accent-hover: #60a5fa;
+
+    color-scheme: dark;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+    background-color: var(--accent);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface-hover);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+
+/* =========================================================
+   THEME TRANSITIONS
+========================================================= */
+
+* {
+    border-color: var(--border);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   HERO TYPOGRAPHY ANIMATIONS
+========================================================= */
+
+.hero-fade-up {
+    opacity: 0;
+    animation: heroFadeUp 0.7s ease-out forwards;
+}
+
+.hero-letter-reveal {
+    animation: heroLetterReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-word-reveal {
+    animation: heroWordReveal 0.65s ease-out forwards;
+}
+
+.hero-button-reveal {
+    animation: heroButtonReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* =========================================================
+   NAME LETTER
+========================================================= */
+
+@keyframes heroLetterReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) rotateX(70deg);
+        filter: blur(7px);
+    }
+
+    70% {
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   WORD REVEAL
+========================================================= */
+
+@keyframes heroWordReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   FADE UP
+========================================================= */
+
+@keyframes heroFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   BUTTON REVEAL
+========================================================= */
+
+@keyframes heroButtonReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.94);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.01);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-fade-up,
+    .hero-letter-reveal,
+    .hero-word-reveal,
+    .hero-button-reveal {
+        animation-duration: 0.01ms !important;
+        animation-delay: 0ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================================================
+   HERO AMBIENT MOTION
+========================================================= */
+
+.hero-name-style {
+    font-family:
+        "Playfair Display",
+        "Bodoni 72",
+        "Didot",
+        "Baskerville",
+        Georgia,
+        serif;
+
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -0.045em;
+
+    text-shadow:
+        0 0 40px rgba(255, 255, 255, 0.04);
+}
+
+/* Moving Orb 1 */
+
+@keyframes heroOrbOne {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(180px, 100px, 0) scale(1.15);
+    }
+}
+
+.animate-hero-orb-one {
+    animation: heroOrbOne 14s ease-in-out infinite;
+}
+
+/* Moving Orb 2 */
+
+@keyframes heroOrbTwo {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(-160px, 120px, 0) scale(1.12);
+    }
+}
+
+.animate-hero-orb-two {
+    animation: heroOrbTwo 17s ease-in-out infinite;
+}
+
+/* Moving Orb 3 */
+
+@keyframes heroOrbThree {
+
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(120px, -100px, 0) scale(1.1);
+    }
+}
+
+.animate-hero-orb-three {
+    animation: heroOrbThree 16s ease-in-out infinite;
+}
+
+/* Subtle Gradient Movement */
+
+@keyframes heroGradient {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.65;
+    }
+}
+
+.animate-hero-gradient {
+    animation: heroGradient 10s ease-in-out infinite;
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-hero-orb-one,
+    .animate-hero-orb-two,
+    .animate-hero-orb-three,
+    .animate-hero-gradient {
+        animation: none !important;
+    }
+}
+
+/* =========================================================
+   HERO MOVING BLURRED BALL
+========================================================= */
+
+@keyframes heroBall {
+    0% {
+        transform: translate3d(-50px, 20px, 0) scale(0.9);
+    }
+
+    25% {
+        transform: translate3d(35vw, -20px, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(65vw, 100px, 0) scale(1.08);
+    }
+
+    75% {
+        transform: translate3d(85vw, -30px, 0) scale(0.96);
+    }
+
+    100% {
+        transform: translate3d(110vw, 60px, 0) scale(0.9);
+    }
+}
+
+.animate-hero-ball {
+    animation: heroBall 24s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform;
+}
